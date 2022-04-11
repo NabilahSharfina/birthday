@@ -1,5 +1,5 @@
 const animateCSS = (element, animation, delay, prefix = 'animate__') =>
-  // create a Promise and return it
+  // Create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
     const node = document.querySelector(`.${element}`);
@@ -29,7 +29,6 @@ animateCSS('wishText', 'fadeIn', 0);
 animateCSS('heart', 'bounceInLeft', 0);
 animateCSS('refresh-btn', 'bounceIn', 0);
 animateCSS('heart-icon', 'heartBeat', 0);
-
 
 /* Balloon animation from https://codepen.io/Jemimaabu/pen/vYEYdOy */
 function random(num) {
@@ -85,14 +84,14 @@ setTimeout(function () {
 }, 22000);
 
 
-// takes custom input from input.json from whichever field is not empty, otherwise html text is used.
+// Takes custom input from input.json from whichever field is not empty, otherwise html text is used.
 const fetchData = () => {
   fetch("input.json")
     .then(data => data.json())
     .then(data => {
       Object.keys(data).map(key => {
         if (data[key] !== "") {
-            //console.log(key,data[key])
+            // Console.log(key,data[key])
             document.getElementById(key).innerText = data[key];
           }
         });

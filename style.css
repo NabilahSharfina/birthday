@@ -76,7 +76,6 @@ img.center {
     font-size: 1.5rem;
     font-weight: lighter;
 }
-  
 .three {
     font-size: 2.5rem;
     padding: 3px 5px;
@@ -92,16 +91,15 @@ img.center {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-  }
-  
-  .balloon {
+}
+
+.balloon {
     height: 125px;
     width: 105px;
     border-radius: 75% 75% 70% 70%;
     position: relative;
-  }
-  
-  .balloon:before {
+}
+.balloon:before {
     content: "";
     height: 75px;
     width: 1px;
@@ -113,26 +111,25 @@ img.center {
     left: 0;
     right: 0;
     margin: auto;
-  }
+}
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
   
-  .balloon:after {
-      content: "▲";
-      text-align: center;
-      display: block;
-      position: absolute;
-      color: inherit;
-      top: 120px;
-      left: 0;
-      right: 0;
-      margin: auto;
-  }
-  
-  @keyframes float {
+@keyframes float {
     from {transform: translateY(100vh);
     opacity: 1;}
     to {transform: translateY(-300vh);
     opacity: 0;}
-  }
+}
 /*
 @keyframes rotate {
     from {
@@ -142,12 +139,13 @@ img.center {
         transform: rotate(90deg);
     }
 } */
+
 .wish-hbd {
     font-size: 5rem;
     position: relative;
     margin: 0;
     text-transform: uppercase;
-  }
+}
   
 h5 {
     font-weight: lighter;
@@ -188,26 +186,32 @@ h5 {
     .container {
       width: 90%;
     }
+    
     .one {
         font-size: 2rem;
     }
+    
     .three {
         font-size: 2.1rem;
     }
+    
     .four {
       width: 90%;
     }
+    
     .wish-hbd {
         font-size: 1.8rem;
-      }
+    }
     
     h5 {
         font-size: 1.3rem;
-      }
+    }
+    
     img {
         width: 300px;
         height: 200px;
     }
+
     .refresh-btn {
         display: none;
     }
